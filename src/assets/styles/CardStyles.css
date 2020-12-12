@@ -1,0 +1,12 @@
+:root {
+  --tarot-card-bakcground: #0b0a18;
+  --tarot-shadow-color: #895070;
+}
+
+.card-tarot {
+  width: 200px;
+  height: 400px;
+  margin: 1rem;
+  background-color: var(--tarot-card-bakcground) ;
+  box-shadow: 1px 1px 12px 0px var(--tarot-shadow-color);
+}

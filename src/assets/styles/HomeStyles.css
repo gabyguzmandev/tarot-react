@@ -1,0 +1,60 @@
+
+.title-app {
+  color: var(--neutro-color);
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  text-align: center;
+  animation: brillant 2s infinite;
+}
+
+.app-tarot-msg {
+  color: var(--neutro-color);
+  margin: 0 12rem;
+}
+.wrapper-tarot{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.actions-tarot {
+  display: flex;
+  justify-content: center;
+}
+
+.simple-button-tarot:focus{
+  outline: none;
+}
+
+.simple-button-tarot:hover{
+  background-color: var(--neutro-color);
+  color: var(--warm-color);
+}
+
+.simple-button-tarot{
+  background-color: var(--warm-color);
+  border: 2px solid var(--warmest-color);
+  border-radius: 1rem;
+  font-family: var(--black-normal-text);
+  color: var(--neutro-color);
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+@keyframes brillant{
+  0%{
+    text-shadow: 0;
+  }
+  50%{
+    font-weight: 500;
+    text-shadow: 1px 1px 0.5rem var(--warm-color); 
+  }
+  100% {
+    font-weight: 500;
+    text-shadow: 1px var(--warm-color); 
+  }
+}
+

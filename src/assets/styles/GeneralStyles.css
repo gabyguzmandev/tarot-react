@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
+
+:root {
+  --darknest-color: #19181f;
+  --coolest-color: #8399ae;
+  --neutro-color: #e2d4c4;
+  --warm-color: #ff9400;
+  --warmest-color: #824404;
+  --high-font-family: 'Langar', cursive;
+  --special-font-family:   'Gaegu', cursive;
+  --normal-font-family: 'Advent Pro', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-family: var(--normal-font-family);
+}
+
+body{
+  background-color: var(--darknest-color);
+  font-size: 16px;
+}
+
+.title {
+  font-family: var(--high-font-family);
+}
+
+.special-text {
+  font-family: var(--special-font-family);
+}
+
+.normal-text{
+  font-family: var(--normal-font-family);
+}
+
+.black-normal-text {
+  font-family: var(--normal-font-family);
+  font-weight: 700;
+}
