@@ -14,8 +14,7 @@
 }
 .wrapper-tarot{
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  padding: 2rem 3rem;
 }
 
 .actions-tarot {
@@ -38,10 +37,30 @@
   border-radius: 1rem;
   font-family: var(--black-normal-text);
   color: var(--neutro-color);
-  height: 3rem;
-  width: 10rem;
-  font-size: 1.6rem;
-  line-height: 2rem;
+  height: 2rem;
+  width: 8rem;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+
+.emphasis-tarot-card{
+  background-color: var(--coolest-color);
+  opacity: 0.5;
+}
+
+.wrapper-selected-tarot{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130,68,4,0.6);
+  z-index: 2;
+}
+
+.selected-tarot{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 @keyframes brillant{

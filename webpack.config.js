@@ -16,7 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { 
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -28,7 +28,11 @@ module.exports = {
       {
         test: /\.html$/i,
         use: 'html-loader',
-      }
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        loader: 'file-loader'
+      },
     ]
   },
   devServer: {

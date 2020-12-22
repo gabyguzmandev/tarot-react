@@ -3,12 +3,37 @@ import Home from '../pages/Home';
 
 
 const HomeLayout = (props) => {
-  const [cardOrden, mixCards] = useState([0,1,2,3,4,5,6,7,7,8,9,10,12,13,14,15,16,17,18,19,20,21]);
-  const handle = () => {
-    mixCards([21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11,10,9,8,7,6,5,4,3,2,1,0]);
-    console.log(cardOrden);
+  const [cardOrden, mixCards] = useState(props.cards);
+  const [selectedCard, getSelectedCard] = useState(null);
+
+  const mixedCards = () => {
+    let copyCardsOrden = cardOrden;
+    let newCardsOrden = [];
+    let index = 0;
+    do{
+      let number = Math.floor(Math.random() * (copyCardsOrden.length) + 0);
+      newCardsOrden[index++] = copyCardsOrden[number];
+      if(number != copyCardsOrden.length) {
+        copyCardsOrden[number] = copyCardsOrden[copyCardsOrden.length - 1];
+      }
+      copyCardsOrden.pop();
+    }while(copyCardsOrden.length);
+    mixCards(newCardsOrden);
   }
-  return( <Home cards={props.cards} title={props.title} handleClickMix={handle}></Home>);
+
+  const clickCardAction = (evt) => {
+    getSelectedCard(evt);
+  }
+
+  return( <Home
+            cards={cardOrden}
+            title={props.title}
+            handleClickMix={mixedCards}
+            handleClickCard={clickCardAction}
+            selectedCard = {selectedCard}
+            pathImg = {props.absPath}
+            getSelectedCard = {getSelectedCard}
+          ></Home>);
 };
 
 export default HomeLayout;

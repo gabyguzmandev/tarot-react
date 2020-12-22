@@ -1,0 +1,21 @@
+
+.card-tarot {
+  flex: 1 1 3rem;
+  height: 20rem;
+  background-color: var(--tarot-card-bakcground);
+  box-shadow: 1px 1px 12px 0px var(--tarot-shadow-color);
+}
+.card-tarot:last-child {
+  flex: 1 0 10rem;
+}
+
+
+.card-tarot-mixed {
+ animation: mixed 3s infinite;
+}
+
+@keyframes mixed{
+  to {
+    transform: translateX(10px)
+  }
+}
